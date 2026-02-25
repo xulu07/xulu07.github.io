@@ -961,17 +961,17 @@ section,
 }
 
 @media (max-width: 768px) {
-  .culture-category .post-entry.small-img .thumbnail {
+  .like-you-category .post-entry.small-img .thumbnail {
     flex: 0 0 100%;
     margin-bottom: 20px;
   }
 }
 
-.culture-category .border-bottom {
+.like-you-category .border-bottom {
   border-color: color-mix(in srgb, var(--default-color), transparent 90%) !important;
 }
 
-.culture-category .post-meta {
+.like-you-category .post-meta {
   font-size: 11px;
   letter-spacing: 0.07rem;
   text-transform: uppercase;
@@ -980,50 +980,82 @@ section,
   margin-bottom: 10px;
 }
 
-.culture-category .author .photo {
+.like-you-category .author .photo {
   margin-right: 10px;
 }
 
-.culture-category .author .photo img {
+.like-you-category .author .photo img {
   width: 40px;
   border-radius: 50%;
   margin-bottom: 0;
 }
 
-.culture-category .author .name h3 {
+.like-you-category .author .name h3 {
   margin: 0;
   padding: 0;
   font-size: 15px;
   font-family: var(--default-font);
 }
 
-.culture-category .post-list {
+.like-you-category .post-list {
   margin-bottom: 30px;
 }
 
-.culture-category .post-list img {
+.like-you-category .post-list img {
   margin-bottom: 30px;
 }
 
-.culture-category .post-list h2 {
+.like-you-category .post-list h2 {
+  font-family: 'Hi Melody', sans-serif;/* 韩字体 */
+  /* font-family: 'Gamja Flower', sans-serif; */
   margin-bottom: 20px;
-  font-size: 20px;
+  font-size: 25px;
   font-weight: 600;
   line-height: 1.2;
 }
 
-.culture-category .post-list h2 a {
+.like-you-category .post-list h2 .subtitle {
+  /* 中字体 */
+  margin-bottom: 20px;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.like-you-category .post-list h2 a {
   color: var(--heading-color);
 }
 
-.culture-category .post-list h2 a:hover {
+.like-you-category .post-list h2 a:hover {
   text-decoration: underline;
 }
 
-.culture-category .post-list.lg h2 {
+.like-you-category .post-list.lg h2 {
   font-size: 40px;
   line-height: 1;
 }
+
+
+
+
+
+.like-you-category .expandable-item h2 {
+  cursor: pointer; /* 鼠标移上去变手型 */
+  transition: color 0.2s; /* 颜色过渡 */
+}
+.like-you-category .expandable-item h2:hover {
+  color: #87ceeb; /* hover时变色、蓝色，增强交互感 */
+}
+.like-you-category .expand-content {
+  display: none;
+  margin-top: 10px;
+  padding: 10px;
+  background: #f9f9f9; /* 浅灰色背景，区分内容 */
+  border-radius: 6px; /* 圆角，更美观 */
+  opacity: 1;
+  transition: opacity 0.3s; /* 展开/收起动画 */
+}
+
 
 /*--------------------------------------------------------------
 # Business Category Section
