@@ -753,6 +753,7 @@ section,
   align-items: flex-end;
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center; /* 图片居中 */
 }
 
 .slider .swiper-slide::before {
