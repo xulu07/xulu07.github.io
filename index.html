@@ -18,7 +18,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Hi+Melody:400" rel="stylesheet"><!-- 韩文字体 -->
   <link href="https://fonts.googleapis.com/css?family=Gamja+Flower:400" rel="stylesheet"><!-- 韩文字体 -->
-  <!-- 中文字体 -->
+  <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic:400" rel="stylesheet"><!-- 韩文字体 -->
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -243,13 +243,14 @@
       <div class="container section-title" data-aos="fade-up">
         <div class="section-title-container d-flex align-items-center justify-content-between">
           <h2>좋아하는 100가지 이유</h2>
-          <p>喜欢你的100个理由</p>
+        <!--<p>喜欢你的100个理由</p>-->
         </div>
       </div><!-- End Section Title -->
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
 
-        <div class="row">
+        <!--  每个row都增加分隔线   -->
+        <div class="row" style="margin-bottom: 30px; padding-bottom: 20px; border-bottom: 1px solid color-mix(in srgb, var(--default-color), transparent 90%)">
           <div class="col-lg-4 border-start custom-border">
                 <div class="post-list expandable-item">
                   <div class="post-meta"><span class="date">이유</span> <span class="mx-1">•</span> <span>#1</span></div>
@@ -257,70 +258,241 @@
                     택이에게 영혼을 불어넣어 주신 점
                     <p class="subtitle">You breathed life into Taek | 你给阿泽赋予了灵魂</p>
                   </h2>
-
                   <div class="expand-content">
-                    <p>저는 택이를 통해 보검 씨를 알게 되었어요.</p>
-                    <p>응답하라 1988>은 제 인생 드라마이고, 택이는 제가 가장 좋아하는 캐릭터예요.</p>
-                    <p>택이 덕분에 우리가 이렇게 만나게 되었고, 보검 씨를 점점 더 좋아하게 되었어요.</p>
+                    <p>❤ 저는 택이를 통해 보검 씨를 알게 되었어요.</p>
+                    <p>❤ &lt 응답하라 1988 &gt 은 제 인생 드라마이고, 택이는 제가 가장 좋아하는 캐릭터예요.</p>
+                    <p>❤ 택이 덕분에 우리가 이렇게 만나게 되었고, 보검 씨를 점점 더 좋아하게 되었어요.</p>
                   </div>
-<!--                  <h3 class="subtitle">You breathed life into Taek | 你给阿泽赋予了灵魂</h3>-->
+                  <!--  插入图片，自适应响应式布局，设置圆角、上下和左右间距 -->
+                  <img src="assets/img/taek.jpg" alt="" class="img-fluid" style="border-radius: 8px; margin: 5px 0;">
                 </div>
 
-
-
-
-                <div class="post-list">
+                <div class="post-list expandable-item">
                   <div class="post-meta"><span class="date">이유</span> <span class="mx-1">•</span> <span>#2</span></div>
-                  <h2>늘 감사하다는 말을 하시는 점</h2>
+                  <h2 onclick="toggleContent(this)">
+                    늘 감사하다는 말을 하시는 점
+                    <p class="subtitle">Always thankful | 永远会说感谢的话</p>
+                  </h2>
+                  <div class="expand-content">
+                    <p>❤ 몇 년 전에 보검 씨께서 하신 말씀, "늘 감사하다고 말하니까 감사한 일들이 생기더라고요"를 기억하고 있습니다.</p>
+                    <p>❤ 보검 씨 덕분에 저도 감사하는 마음으로 살고 있고, 그래서 제 인생은 정말 행복합니다. 정말 감사합니다!</p>
+                  </div>
                 </div>
+
                 <div class="post-list">
                   <div class="post-meta"><span class="date">이유</span> <span class="mx-1">•</span> <span>#3</span></div>
                   <h2>택이에게 영혼을 불어넣어 주신 점</h2>
                 </div>
-             <div class="post-list">
+                <div class="post-list">
                   <div class="post-meta"><span class="date">이유</span> <span class="mx-1">•</span> <span>#4</span></div>
                   <h2>택이에게 영혼을 불어넣어 주신 점</h2>
                 </div>
               </div>
 
           <div class="col-lg-4 border-start custom-border">
-            <div class="post-list">
-              <div class="post-meta"><span class="date">이유</span> <span class="mx-1">•</span> <span>#1</span></div>
-              <h2>6 Easy Steps To Create Your Own Cute Merch For Instagram</h2>
-            </div>
-            <div class="post-list">
-              <div class="post-meta"><span class="date">이유</span> <span class="mx-1">•</span> <span>#2</span></div>
-              <h2>10 Life-Changing Hacks Every Working Mom Should Know</h2>
-            </div>
-            <div class="post-list">
-              <div class="post-meta"><span class="date">이유</span> <span class="mx-1">•</span> <span>#3</span></div>
-              <h2>5 Great Startup Tips for Female Founders</h2>
-            </div>
-          </div>
+                <div class="post-list expandable-item">
+                  <div class="post-meta"><span class="date">이유</span> <span class="mx-1">•</span> <span>#5</span></div>
+                  <h2 onclick="toggleContent(this)">
+                    택이에게 영혼을 불어넣어 주신 점
+                    <p class="subtitle">You breathed life into Taek | 你给阿泽赋予了灵魂</p>
+                  </h2>
+                  <div class="expand-content">
+                    <p>❤ 저는 택이를 통해 보검 씨를 알게 되었어요.</p>
+                    <p>❤ &lt 응답하라 1988 &gt 은 제 인생 드라마이고, 택이는 제가 가장 좋아하는 캐릭터예요.</p>
+                    <p>❤ 택이 덕분에 우리가 이렇게 만나게 되었고, 보검 씨를 점점 더 좋아하게 되었어요.</p>
+                  </div>
+                </div>
+
+                <div class="post-list expandable-item">
+                  <div class="post-meta"><span class="date">이유</span> <span class="mx-1">•</span> <span>#6</span></div>
+                  <h2 onclick="toggleContent(this)">
+                    늘 감사하다는 말을 하시는 점
+                    <p class="subtitle">永远会说感谢的话</p>
+                  </h2>
+                  <div class="expand-content">
+                    <p>❤ 저는 택이를 통해 보검 씨를 알게 되었어요.</p>
+                    <p>❤ &lt 응답하라 1988 &gt 은 제 인생 드라마이고, 택이는 제가 가장 좋아하는 캐릭터예요.</p>
+                    <p>❤ 택이 덕분에 우리가 이렇게 만나게 되었고, 보검 씨를 점점 더 좋아하게 되었어요.</p>
+                  </div>
+                    <!--  插入图片，自适应响应式布局，设置圆角、上下和左右间距 -->
+                    <img src="assets/img/post-landscape-1.jpg" alt="" class="img-fluid" style="border-radius: 8px; margin: 5px 0;">
+                </div>
+
+                <div class="post-list">
+                  <div class="post-meta"><span class="date">이유</span> <span class="mx-1">•</span> <span>#7</span></div>
+                  <h2>택이에게 영혼을 불어넣어 주신 점</h2>
+                </div>
+                <div class="post-list">
+                  <div class="post-meta"><span class="date">이유</span> <span class="mx-1">•</span> <span>#8</span></div>
+                  <h2>택이에게 영혼을 불어넣어 주신 점</h2>
+                </div>
+              </div>
 
           <div class="col-lg-4 border-start custom-border">
-  <!-- 第一个可展开项 -->
-  <div class="post-list expandable-item">
-    <div class="post-meta"><span class="date">이유</span> <span class="mx-1">•</span> <span>#1</span></div>
-    <!-- 点击的标题，加cursor:pointer提示可点击 -->
-    <h2 onclick="toggleContent(this)">6 Easy Steps To Create Your Own Cute Merch For Instagram</h2>
-    <!-- 隐藏的内容区域，默认display:none -->
-    <div class="expand-content">
-      <p>这是点击后展开的具体内容：</p>
-    </div>
-  </div>
+                <div class="post-list expandable-item">
+                  <div class="post-meta"><span class="date">이유</span> <span class="mx-1">•</span> <span>#9</span></div>
+                  <h2 onclick="toggleContent(this)">
+                    택이에게 영혼을 불어넣어 주신 점
+                    <p class="subtitle">You breathed life into Taek | 你给阿泽赋予了灵魂</p>
+                  </h2>
+                  <div class="expand-content">
+                    <p>❤ 저는 택이를 통해 보검 씨를 알게 되었어요.</p>
+                    <p>❤ &lt 응답하라 1988 &gt 은 제 인생 드라마이고, 택이는 제가 가장 좋아하는 캐릭터예요.</p>
+                    <p>❤ 택이 덕분에 우리가 이렇게 만나게 되었고, 보검 씨를 점점 더 좋아하게 되었어요.</p>
+                  </div>
+                </div>
 
-  <!-- 第二个可展开项 -->
-  <div class="post-list expandable-item">
-    <div class="post-meta"><span class="date">이유</span> <span class="mx-1">•</span> <span>#1</span></div>
-    <h2 onclick="toggleContent(this)">6 Easy Steps To Create Your Own Cute Merch For Instagram</h2>
-    <div class="expand-content">
-      <p>这是私服版的具体信息：</p>
-    </div>
-  </div>
-</div>
+                <div class="post-list expandable-item">
+                  <div class="post-meta"><span class="date">이유</span> <span class="mx-1">•</span> <span>#10</span></div>
+                  <h2 onclick="toggleContent(this)">
+                    늘 감사하다는 말을 하시는 점
+                    <p class="subtitle">永远会说感谢的话</p>
+                  </h2>
+                  <div class="expand-content">
+                    <p>❤ 저는 택이를 통해 보검 씨를 알게 되었어요.</p>
+                    <p>❤ &lt 응답하라 1988 &gt 은 제 인생 드라마이고, 택이는 제가 가장 좋아하는 캐릭터예요.</p>
+                    <p>❤ 택이 덕분에 우리가 이렇게 만나게 되었고, 보검 씨를 점점 더 좋아하게 되었어요.</p>
+                  </div>
+                </div>
 
-<!-- 核心JS函数：切换内容显示/隐藏 -->
+                <div class="post-list">
+                  <div class="post-meta"><span class="date">이유</span> <span class="mx-1">•</span> <span>#11</span></div>
+                  <h2>택이에게 영혼을 불어넣어 주신 점</h2>
+                    <!--  插入图片，自适应响应式布局，设置圆角、上下和左右间距 -->
+                    <img src="assets/img/post-landscape-3.jpg" alt="" class="img-fluid" style="border-radius: 8px; margin: 5px 0;">
+                </div>
+                <div class="post-list">
+                  <div class="post-meta"><span class="date">이유</span> <span class="mx-1">•</span> <span>#12</span></div>
+                  <h2>택이에게 영혼을 불어넣어 주신 점</h2>
+                </div>
+              </div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-4 border-start custom-border">
+                <div class="post-list expandable-item">
+                  <div class="post-meta"><span class="date">이유</span> <span class="mx-1">•</span> <span>#16</span></div>
+                  <h2 onclick="toggleContent(this)">
+                    택이에게 영혼을 불어넣어 주신 점
+                    <p class="subtitle">You breathed life into Taek | 你给阿泽赋予了灵魂</p>
+                  </h2>
+                  <div class="expand-content">
+                    <p>❤ 저는 택이를 통해 보검 씨를 알게 되었어요.</p>
+                    <p>❤ &lt 응답하라 1988 &gt 은 제 인생 드라마이고, 택이는 제가 가장 좋아하는 캐릭터예요.</p>
+                    <p>❤ 택이 덕분에 우리가 이렇게 만나게 되었고, 보검 씨를 점점 더 좋아하게 되었어요.</p>
+                  </div>
+                </div>
+
+                <div class="post-list expandable-item">
+                  <div class="post-meta"><span class="date">이유</span> <span class="mx-1">•</span> <span>#17</span></div>
+                  <h2 onclick="toggleContent(this)">
+                    늘 감사하다는 말을 하시는 점
+                    <p class="subtitle">永远会说感谢的话</p>
+                  </h2>
+                  <div class="expand-content">
+                    <p>❤ 저는 택이를 통해 보검 씨를 알게 되었어요.</p>
+                    <p>❤ &lt 응답하라 1988 &gt 은 제 인생 드라마이고, 택이는 제가 가장 좋아하는 캐릭터예요.</p>
+                    <p>❤ 택이 덕분에 우리가 이렇게 만나게 되었고, 보검 씨를 점점 더 좋아하게 되었어요.</p>
+                  </div>
+                </div>
+
+                <div class="post-list">
+                  <div class="post-meta"><span class="date">이유</span> <span class="mx-1">•</span> <span>#18</span></div>
+                  <h2>택이에게 영혼을 불어넣어 주신 점</h2>
+                </div>
+                <div class="post-list">
+                  <div class="post-meta"><span class="date">이유</span> <span class="mx-1">•</span> <span>#19</span></div>
+                  <h2>택이에게 영혼을 불어넣어 주신 점</h2>
+                </div>
+                <div class="post-list">
+                  <div class="post-meta"><span class="date">이유</span> <span class="mx-1">•</span> <span>#20</span></div>
+                  <h2>택이에게 영혼을 불어넣어 주신 점</h2>
+                </div>
+              </div>
+
+          <div class="col-lg-4 border-start custom-border">
+                <div class="post-list expandable-item">
+                  <div class="post-meta"><span class="date">이유</span> <span class="mx-1">•</span> <span>#21</span></div>
+                  <h2 onclick="toggleContent(this)">
+                    택이에게 영혼을 불어넣어 주신 점
+                    <p class="subtitle">You breathed life into Taek | 你给阿泽赋予了灵魂</p>
+                  </h2>
+                  <div class="expand-content">
+                    <p>❤ 저는 택이를 통해 보검 씨를 알게 되었어요.</p>
+                    <p>❤ &lt 응답하라 1988 &gt 은 제 인생 드라마이고, 택이는 제가 가장 좋아하는 캐릭터예요.</p>
+                    <p>❤ 택이 덕분에 우리가 이렇게 만나게 되었고, 보검 씨를 점점 더 좋아하게 되었어요.</p>
+                  </div>
+                </div>
+
+                <div class="post-list expandable-item">
+                  <div class="post-meta"><span class="date">이유</span> <span class="mx-1">•</span> <span>#22</span></div>
+                  <h2 onclick="toggleContent(this)">
+                    늘 감사하다는 말을 하시는 점
+                    <p class="subtitle">永远会说感谢的话</p>
+                  </h2>
+                  <div class="expand-content">
+                    <p>❤ 저는 택이를 통해 보검 씨를 알게 되었어요.</p>
+                    <p>❤ &lt 응답하라 1988 &gt 은 제 인생 드라마이고, 택이는 제가 가장 좋아하는 캐릭터예요.</p>
+                    <p>❤ 택이 덕분에 우리가 이렇게 만나게 되었고, 보검 씨를 점점 더 좋아하게 되었어요.</p>
+                  </div>
+                </div>
+
+                <div class="post-list">
+                  <div class="post-meta"><span class="date">이유</span> <span class="mx-1">•</span> <span>#23</span></div>
+                  <h2>택이에게 영혼을 불어넣어 주신 점</h2>
+                </div>
+                <div class="post-list">
+                  <div class="post-meta"><span class="date">이유</span> <span class="mx-1">•</span> <span>#24</span></div>
+                  <h2>택이에게 영혼을 불어넣어 주신 점</h2>
+                </div>
+                <div class="post-list">
+                  <div class="post-meta"><span class="date">이유</span> <span class="mx-1">•</span> <span>#25</span></div>
+                  <h2>택이에게 영혼을 불어넣어 주신 점</h2>
+                </div>
+              </div>
+
+          <div class="col-lg-4 border-start custom-border">
+                <div class="post-list expandable-item">
+                  <div class="post-meta"><span class="date">이유</span> <span class="mx-1">•</span> <span>#26</span></div>
+                  <h2 onclick="toggleContent(this)">
+                    택이에게 영혼을 불어넣어 주신 점
+                    <p class="subtitle">You breathed life into Taek | 你给阿泽赋予了灵魂</p>
+                  </h2>
+                  <div class="expand-content">
+                    <p>❤ 저는 택이를 통해 보검 씨를 알게 되었어요.</p>
+                    <p>❤ &lt 응답하라 1988 &gt 은 제 인생 드라마이고, 택이는 제가 가장 좋아하는 캐릭터예요.</p>
+                    <p>❤ 택이 덕분에 우리가 이렇게 만나게 되었고, 보검 씨를 점점 더 좋아하게 되었어요.</p>
+                  </div>
+                </div>
+
+                <div class="post-list expandable-item">
+                  <div class="post-meta"><span class="date">이유</span> <span class="mx-1">•</span> <span>#27</span></div>
+                  <h2 onclick="toggleContent(this)">
+                    늘 감사하다는 말을 하시는 점
+                    <p class="subtitle">永远会说感谢的话</p>
+                  </h2>
+                  <div class="expand-content">
+                    <p>❤ 저는 택이를 통해 보검 씨를 알게 되었어요.</p>
+                    <p>❤ &lt 응답하라 1988 &gt 은 제 인생 드라마이고, 택이는 제가 가장 좋아하는 캐릭터예요.</p>
+                    <p>❤ 택이 덕분에 우리가 이렇게 만나게 되었고, 보검 씨를 점점 더 좋아하게 되었어요.</p>
+                  </div>
+                </div>
+
+                <div class="post-list">
+                  <div class="post-meta"><span class="date">이유</span> <span class="mx-1">•</span> <span>#28</span></div>
+                  <h2>택이에게 영혼을 불어넣어 주신 점</h2>
+                </div>
+                <div class="post-list">
+                  <div class="post-meta"><span class="date">이유</span> <span class="mx-1">•</span> <span>#29</span></div>
+                  <h2>택이에게 영혼을 불어넣어 주신 점</h2>
+                </div>
+                <div class="post-list">
+                  <div class="post-meta"><span class="date">이유</span> <span class="mx-1">•</span> <span>#30</span></div>
+                  <h2>택이에게 영혼을 불어넣어 주신 점</h2>
+                </div>
+              </div>
+        </div>
+
 <script>
 function toggleContent(h2Element) {
   // 找到当前h2后面的expand-content容器

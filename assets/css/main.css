@@ -919,44 +919,44 @@ section,
 }
 
 /*--------------------------------------------------------------
-# Culture Category Section
+# Culture Category Section  改成了Like-you Category Section
 --------------------------------------------------------------*/
-.culture-category .post-entry {
+.like-you-category .post-entry {
   margin-bottom: 30px;
 }
 
-.culture-category .post-entry h3 a {
+.like-you-category .post-entry h3 a {
   color: var(--heading-color);
   font-weight: 600;
 }
 
-.culture-category .post-entry h3 a:hover {
+.like-you-category .post-entry h3 a:hover {
   text-decoration: underline;
 }
 
-.culture-category .post-entry .thumbnail {
+.like-you-category .post-entry .thumbnail {
   flex: 0 0 65%;
 }
 
 @media (max-width: 960px) {
-  .culture-category .post-entry .thumbnail {
+  .like-you-category .post-entry .thumbnail {
     flex: 0 0 100%;
     margin-bottom: 20px;
   }
 }
 
-.culture-category .post-entry.half .thumbnail {
+.like-you-category .post-entry.half .thumbnail {
   flex: 0 0 50%;
 }
 
 @media (max-width: 768px) {
-  .culture-category .post-entry.half .thumbnail {
+  .like-you-category .post-entry.half .thumbnail {
     flex: 0 0 100%;
     margin-bottom: 20px;
   }
 }
 
-.culture-category .post-entry.small-img .thumbnail {
+.like-you-category .post-entry.small-img .thumbnail {
   flex: 0 0 30%;
 }
 
@@ -997,6 +997,11 @@ section,
   font-family: var(--default-font);
 }
 
+.like-you-category .container h2 {
+  font-family: 'Nanum Gothic', '맑은 고딕', sans-serif;/* 韩字体 */
+  font-weight: 600;
+}
+
 .like-you-category .post-list {
   margin-bottom: 30px;
 }
@@ -1015,7 +1020,7 @@ section,
 }
 
 .like-you-category .post-list h2 .subtitle {
-  /* 中字体 */
+  font-family: Comic Sans MS, 'STHeiti', sans-serif;/* 中字体 */
   margin-bottom: 20px;
   font-size: 15px;
   font-weight: 600;
@@ -1047,10 +1052,12 @@ section,
   color: #87ceeb; /* hover时变色、蓝色，增强交互感 */
 }
 .like-you-category .expand-content {
+  font-family: 'Nanum Gothic', '맑은 고딕', sans-serif;/* 韩字体 */
+  font-size: 15px;
   display: none;
   margin-top: 10px;
   padding: 10px;
-  background: #f9f9f9; /* 浅灰色背景，区分内容 */
+  background: #f8fcff; /* 浅蓝色背景，区分内容 */
   border-radius: 6px; /* 圆角，更美观 */
   opacity: 1;
   transition: opacity 0.3s; /* 展开/收起动画 */
