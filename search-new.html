@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Index - ZenBlog Bootstrap Template</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+
+    <!-- Favicons -->
+    <link href="assets/img/favicon.png" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Hi+Melody:400" rel="stylesheet"><!-- 韩文字体 -->
+    <link href="https://fonts.googleapis.com/css?family=Gamja+Flower:400" rel="stylesheet"><!-- 韩文字体 -->
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic:400" rel="stylesheet"><!-- 韩文字体 -->
+
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <!-- Main CSS File -->
+    <link href="assets/css/main.css" rel="stylesheet">
+</head>
+
+<body class="index-page">
+
+    <header id="header" class="header d-flex align-items-center sticky-top">
+        <div class="container position-relative d-flex align-items-center justify-content-between">
+            <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+                <h1 class="sitename">BOGUMMY⭐SHINING</h1>
+            </a>
+            <nav id="navmenu" class="navmenu">
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+        <!-- Slider Section -->
+        <section id="slider" class="slider section dark-background">
+            <div class="container" data-aos="fade-up" data-aos-delay="100">
+                <div class="swiper init-swiper">
+                    <script type="application/json" class="swiper-config">
+                    {
+                        "loop": true,
+                        "speed": 600,
+                        "autoplay": {
+                            "delay": 5000
+                        },
+                        "slidesPerView": "auto",
+                        "centeredSlides": true,
+                        "pagination": {
+                            "el": ".swiper-pagination",
+                            "type": "bullets",
+                            "clickable": true
+                        },
+                        "navigation": {
+                            "nextEl": ".swiper-button-next",
+                            "prevEl": ".swiper-button-prev"
+                        }
+                    }
+                </script>
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide" style="background-image: url('assets/img/530.png');">
+                            <div class="content">
+                                <h2><a href="bogummy to our heart.html">530 = I MISS U</a></h2>
+                                <p>This is a special code just for Chinese fans, and it means I miss you.</p>
+                                <p>이것은 중국 팬들만을 위한 비밀 신호이고, 보고 싶어요라는 뜻이에요.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </section><!-- /Slider Section -->
+
+        <!--  Trending Category Section -->
+        <section id="trending-category" class="trending-category section">
+            <div class="container" data-aos="fade-up" data-aos-delay="100">
+                <div class="container" data-aos="fade-up">
+                    <!--Search Widget -->
+                    <div class="search-widget widget-item">
+                        <h3 class="widget-title">보검 씨를 좋아하는 100가지 이유</h3>
+                        <form id="reason-form">
+                            <input type="text" id="num-input" placeholder="仅支持输入1-100数字，查看对应理由">
+                            <button type="submit" title="Search"><i class="bi bi-search"></i></button>
+                        </form>
+                        <div class="error-tip" id="error-tip" style="display: none; color: red; margin-top: 10px;">
+                            ❗请输入1-100之间的有效数字哦～</div>
+                    </div><!--/Search Widget -->
+
+                    <!-- 理由展示容器（修复DOM结构） -->
+                    <div class="post-list expandable-item" id="reason-container"
+                        style="display: none; margin-top: 20px; padding: 15px; border: 1px solid #eee; border-radius: 8px;">
+                        <div class="post-meta">
+                            <span class="date">이유</span>
+                            <span class="mx-1">•</span>
+                            <span id="reason-num">#1</span>
+                        </div>
+                        <!-- 标题容器：主标题 + 副标题 -->
+                        <h2 id="reason-title" style="cursor: pointer; margin: 10px 0;">
+                            <span class="main-title"></span>
+                            <p class="subtitle" style="font-size: 14px; color: #666; margin: 5px 0;"></p>
+                        </h2>
+                        <!-- 展开内容 -->
+                        <div class="expand-content" id="reason-content"
+                            style="margin-top: 10px; padding: 10px; background: #f9f9f9; border-radius: 4px;"></div>
+                    </div>
+                </div>
+            </div>
+
+            <script>
+                // 1. 理由数据（示例1-2，可继续扩展到100）
+                const reasonsList = [
+                    {
+                        num: 1,
+                        title: "택이에게 영혼을 불어넣어 주신 점",
+                        subtitle: "You breathed life into Taek | 你给阿泽赋予了灵魂",
+                        content: [
+                            "❤ 저는 택이를 통해 보검 씨를 알게 되었어요.",
+                            "❤ &lt 응답하라 1988 &gt 은 제 인생 드라마이고, 택이는 제가 가장 좋아하는 캐릭터예요.",
+                            "❤ 택이 덕분에 우리가 이렇게 만나게 되었고, 보검 씨를 점점 더 좋아하게 되었어요."
+                        ]
+                    },
+                    {
+                        num: 2,
+                        title: "보검 씨의 따뜻한 목소리",
+                        subtitle: "Bogum's warm voice | 宝剑温暖的声音",
+                        content: [
+                            "❤ 보검 씨의 노래는 마음을 따뜻하게 해줘요.",
+                            "❤ 매일 밤 그의 목소리를 듣고 잠들어요."
+                        ]
+                    }
+                    // 继续添加3-100的理由...
+                ];
+
+                // 2. 修复：统一元素获取（确保ID对应）
+                const numInput = document.getElementById('num-input');
+                const errorTip = document.getElementById('error-tip');
+                const reasonContainer = document.getElementById('reason-container');
+                const reasonNum = document.getElementById('reason-num');
+                const reasonTitle = document.getElementById('reason-title');
+                const reasonContent = document.getElementById('reason-content');
+                // 副标题元素（新增：匹配修复后的DOM结构）
+                const subtitleEl = reasonTitle.querySelector('.subtitle');
+                const mainTitleEl = reasonTitle.querySelector('.main-title');
+
+                // 3. 修复：表单提交阻止默认行为（避免页面刷新）
+                document.getElementById('reason-form').addEventListener('submit', function (e) {
+                    e.preventDefault(); // 阻止表单提交刷新页面
+                });
+
+                // 4. 修复：输入框监听逻辑（变量名+DOM操作全修正）
+                numInput.addEventListener('input', function () {
+                    // 初始化隐藏
+                    errorTip.style.display = 'none';
+                    reasonContainer.style.display = 'none';
+
+                    // 获取并清理输入值
+                    const inputVal = this.value.trim();
+                    if (inputVal === '') {
+                        return;
+                    }
+
+                    // 验证数字有效性
+                    const inputNum = Number(inputVal);
+                    if (!Number.isInteger(inputNum) || inputNum < 1 || inputNum > reasonsList.length) {
+                        errorTip.textContent = `❌ 请输入1-${reasonsList.length}之间的整数`;
+                        errorTip.style.display = 'block';
+                        return;
+                    }
+
+                    // 获取对应理由
+                    const targetReason = reasonsList[inputNum - 1];
+                    if (!targetReason) {
+                        errorTip.textContent = `❌ 暂无编号${inputNum}的理由`;
+                        errorTip.style.display = 'block';
+                        return;
+                    }
+
+                    // 5. 赋值渲染（匹配修复后的DOM结构）
+                    reasonNum.innerText = `#${targetReason.num}`;
+                    mainTitleEl.innerText = targetReason.title; // 主标题
+                    subtitleEl.innerText = targetReason.subtitle; // 副标题
+                    // 渲染内容（逐行生成p标签）
+                    reasonContent.innerHTML = targetReason.content.map(line => `<p>${line}</p>`).join('');
+
+                    // 显示容器
+                    reasonContainer.style.display = 'block';
+
+                    // 调试日志（可选）
+                    console.log('渲染成功：', targetReason);
+                });
+
+                // 可选：添加点击展开/收起功能（补全原有逻辑）
+                reasonTitle.addEventListener('click', function () {
+                    const content = document.getElementById('reason-content');
+                    content.style.display = content.style.display === 'none' ? 'block' : 'none';
+                });
+            </script>
+        </section><!-- /Trending Category Section -->
+    </main>
+
+    <!-- Scroll Top -->
+    <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+            class="bi bi-arrow-up-short"></i></a>
+
+    <!-- Preloader -->
+    <div id="preloader"></div>
+
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Main JS File -->
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

@@ -12,29 +12,41 @@
 --------------------------------------------------------------*/
 /* Fonts */
 :root {
-  --default-font: "EB Garamond",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --heading-font: "EB Garamond",  sans-serif;
-  --nav-font: "Inter",  sans-serif;
+  --default-font: "EB Garamond", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --heading-font: "EB Garamond", sans-serif;
+  --nav-font: "Inter", sans-serif;
 }
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
-:root { 
-  --background-color: #ffffff; /* Background color for the entire website, including individual sections */
-  --default-color: #212529; /* Default color used for the majority of the text content across the entire website */
-  --heading-color: #535353; /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #465367; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
-  --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
-  --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
+:root {
+  --background-color: #ffffff;
+  /* Background color for the entire website, including individual sections */
+  --default-color: #212529;
+  /* Default color used for the majority of the text content across the entire website */
+  --heading-color: #535353;
+  /* Color for headings, subheadings and title throughout the website */
+  --accent-color: #465367;
+  /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  --surface-color: #ffffff;
+  /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
+  --contrast-color: #ffffff;
+  /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
 }
 
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
 :root {
-  --nav-color: #6a6a6a;  /* The default color of the main navmenu links */
-  --nav-hover-color: #465367; /* Applied to main navmenu links when they are hovered over or active */
-  --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
-  --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
-  --nav-dropdown-color: #6a6a6a; /* Used for navigation links of the dropdown items in the navigation menu. */
-  --nav-dropdown-hover-color: #465367; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+  --nav-color: #6a6a6a;
+  /* The default color of the main navmenu links */
+  --nav-hover-color: #465367;
+  /* Applied to main navmenu links when they are hovered over or active */
+  --nav-mobile-background-color: #ffffff;
+  /* Used as the background color for mobile navigation menu */
+  --nav-dropdown-background-color: #ffffff;
+  /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
+  --nav-dropdown-color: #6a6a6a;
+  /* Used for navigation links of the dropdown items in the navigation menu. */
+  --nav-dropdown-hover-color: #465367;
+  /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
 }
 
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
@@ -753,7 +765,8 @@ section,
   align-items: flex-end;
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center; /* 图片居中 */
+  background-position: center;
+  /* 图片居中 */
 }
 
 .slider .swiper-slide::before {
@@ -788,6 +801,75 @@ section,
 .slider .content h2,
 .slider .content p {
   color: var(--default-color);
+}
+
+/*--------------------------------------------------------------
+# Interactive GIF Styling
+--------------------------------------------------------------*/
+.gif-interactive-container {
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+}
+
+.gif-interactive-container:hover {
+  transform: scale(1.05);
+}
+
+.gif-interactive-container:active {
+  transform: scale(0.95);
+}
+
+.interactive-gif {
+  max-width: 240px;
+  /* Increased from 180px */
+  height: auto;
+  border-radius: 15px;
+  filter: drop-shadow(0 5px 15px rgba(173, 216, 230, 0.4));
+}
+
+.score-display.mini {
+  position: absolute;
+  top: -30px;
+  /* Adjusted for larger GIF */
+  background: rgba(255, 255, 255, 0.95);
+  padding: 4px 15px;
+  /* Slightly larger padding */
+  border-radius: 20px;
+  font-family: 'Gamja Flower', cursive;
+  font-size: 18px;
+  /* Increased from 14px */
+  font-weight: 800;
+  /* Bolder */
+  color: #87ceeb;
+  border: 2px solid #add8e6;
+  /* Thicker border */
+  white-space: nowrap;
+  pointer-events: none;
+  box-shadow: 0 4px 12px rgba(173, 216, 230, 0.2);
+  z-index: 10;
+}
+
+.pulse-animation {
+  animation: pulse 0.4s ease-out;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(1);
+  }
 }
 
 /*--------------------------------------------------------------
@@ -999,7 +1081,8 @@ section,
 }
 
 .like-you-category .container h2 {
-  font-family: 'Nanum Gothic', '맑은 고딕', sans-serif;/* 韩字体 */
+  font-family: 'Nanum Gothic', '맑은 고딕', sans-serif;
+  /* 韩字体 */
   font-weight: 600;
 }
 
@@ -1012,7 +1095,8 @@ section,
 }
 
 .like-you-category .post-list h2 {
-  font-family: 'Hi Melody', sans-serif;/* 韩字体 */
+  font-family: 'Hi Melody', sans-serif;
+  /* 韩字体 */
   /* font-family: 'Gamja Flower', sans-serif; */
   margin-bottom: 20px;
   font-size: 25px;
@@ -1021,7 +1105,8 @@ section,
 }
 
 .like-you-category .post-list h2 .subtitle {
-  font-family: Comic Sans MS, 'STHeiti', sans-serif;/* 中字体 */
+  font-family: Comic Sans MS, 'STHeiti', sans-serif;
+  /* 中字体 */
   margin-bottom: 20px;
   font-size: 15px;
   font-weight: 600;
@@ -1046,28 +1131,183 @@ section,
 
 
 .like-you-category .expandable-item h2 {
-  cursor: pointer; /* 鼠标移上去变手型 */
-  transition: color 0.2s; /* 颜色过渡 */
+  cursor: pointer;
+  /* 鼠标移上去变手型 */
+  transition: color 0.2s;
+  /* 颜色过渡 */
 }
+
 .like-you-category .expandable-item h2:hover {
-  color: #87ceeb; /* hover时变色、蓝色，增强交互感 */
+  color: #87ceeb;
+  /* hover时变色、蓝色，增强交互感 */
 }
+
 .like-you-category .expand-content {
-  font-family: 'Nanum Gothic', '맑은 고딕', sans-serif;/* 韩字体 */
+  font-family: 'Nanum Gothic', '맑은 고딕', sans-serif;
+  /* 韩字体 */
   font-size: 15px;
   display: none;
   margin-top: 10px;
   padding: 10px;
-  background: #f8fcff; /* 浅蓝色背景，区分内容 */
-  border-radius: 6px; /* 圆角，更美观 */
+  background: #f8fcff;
+  /* 浅蓝色背景，区分内容 */
+  border-radius: 6px;
+  /* 圆角，更美观 */
   opacity: 1;
-  transition: opacity 0.3s; /* 展开/收起动画 */
+  transition: opacity 0.3s;
+  /* 展开/收起动画 */
+}
+
+/*--------------------------------------------------------------
+# Music Player Styling
+--------------------------------------------------------------*/
+.music-player-container {
+  width: 100%;
+  max-width: 320px;
+  /* Increased from 280px */
+  padding: 10px;
+  margin-top: 20px;
+}
+
+.player-card {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 24px;
+  /* Increased padding slightly */
+  text-align: center;
+  box-shadow: 0 8px 32px rgba(173, 216, 230, 0.2);
+  /* Changed to light blue shadow */
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.player-card:hover {
+  transform: translateY(-5px);
+}
+
+.disc-wrapper {
+  position: relative;
+  width: 160px;
+  /* Increased from 140px */
+  height: 160px;
+  /* Increased from 140px */
+  margin: 0 auto 20px;
+}
+
+.disc {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: #333;
+  padding: 5px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  animation: rotate 10s linear infinite;
+  animation-play-state: paused;
+}
+
+.disc img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.disc-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 34px;
+  height: 34px;
+  background: #fff;
+  border-radius: 50%;
+  border: 4px solid #f8f9fa;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.player-info h4 {
+  margin: 5px 0;
+  font-size: 18px;
+  /* Slightly larger */
+  color: #333;
+  font-weight: 600;
+}
+
+.player-info p {
+  font-size: 13px;
+  color: #777;
+  margin-bottom: 20px;
+}
+
+.player-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  /* Increased gap */
+  margin-bottom: 20px;
+}
+
+.ctrl-btn {
+  background: none;
+  border: none;
+  font-size: 22px;
+  /* Slightly larger */
+  color: #add8e6;
+  /* Changed to light blue */
+  cursor: pointer;
+  transition: color 0.2s, transform 0.1s;
+}
+
+.ctrl-btn:hover {
+  color: #87ceeb;
+  /* Darker light blue on hover */
+  transform: scale(1.1);
+}
+
+.play-pause {
+  font-size: 36px;
+  /* Larger play button */
+}
+
+.progress-container {
+  width: 100%;
+  height: 5px;
+  /* Slightly thicker */
+  background: rgba(173, 216, 230, 0.2);
+  border-radius: 3px;
+  cursor: pointer;
+  position: relative;
+}
+
+.progress-bar {
+  width: 0%;
+  height: 100%;
+  background: #add8e6;
+  /* Changed to light blue */
+  border-radius: 3px;
+  transition: width 0.1s linear;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.playing .disc {
+  animation-play-state: running;
 }
 
 
-/*--------------------------------------------------------------
-# Business Category Section
---------------------------------------------------------------*/
+
 .business-category .post-entry {
   margin-bottom: 30px;
 }
@@ -1428,12 +1668,6 @@ section,
   margin-left: 8px;
 }
 
-/*--------------------------------------------------------------
-# Starter Section Section
---------------------------------------------------------------*/
-.starter-section {
-  /* Add your styles here */
-}
 
 /*--------------------------------------------------------------
 # Blog Details Section
