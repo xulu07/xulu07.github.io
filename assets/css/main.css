@@ -808,12 +808,25 @@ section,
 --------------------------------------------------------------*/
 .gif-interactive-container {
   position: relative;
-  cursor: pointer;
+  cursor: none;
   transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 10px;
+}
+
+.cursor-label {
+  position: fixed;
+  pointer-events: none;
+  font-family: 'Hi Melody', sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  color: #87ceeb;
+  z-index: 9999;
+  white-space: nowrap;
+  display: none;
+  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
 }
 
 .gif-interactive-container:hover {

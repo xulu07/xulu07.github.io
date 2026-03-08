@@ -5,10 +5,10 @@
 
 const tracks = [
     {
-        title: "All My Love",
-        artist: "Park Bo-gum",
-        cover: "assets/img/taek.jpg",
-        src: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" // Sample music
+        title: "별 보러 가자",
+        artist: "박보검",
+        cover: "assets/img/lets-go-to-see-the-star.jpg",
+        src: "assets/music/별 보러 가자.m4a"
     },
     {
         title: "Bloomin'",

@@ -2,7 +2,7 @@
 const reasonsList = [
     {
         num: 1,
-        title: "택이에게 영혼을 불어넣어 주신 점",
+        title: "택이에게 영혼을 불어넣어 주신 것",
         subtitle: "You breathed life into Taek | 你给阿泽赋予了灵魂",
         content: [
             "❤ 저는 택이를 통해 보검 씨를 알게 되었어요.",
@@ -13,7 +13,7 @@ const reasonsList = [
     },
     {
         num: 2,
-        title: "늘 감사하다는 말을 하시는 점",
+        title: "\"감사하다\"고 말하는 진심",
         subtitle: "Always thankful | 永远会说感谢的话",
         content: [
             "❤ 몇 년 전에 보검 씨께서 하신 말씀, \"늘 감사하다고 말하니까 감사한 일들이 생기더라고요\"를 기억하고 있습니다.",
@@ -23,104 +23,96 @@ const reasonsList = [
     },
     {
         num: 3,
-        title: "선한 영향력을 전파하시는 점",
-        subtitle: "Spreading positive influence | 传播正能量",
+        title: "비주얼이 정말 미쳤습니다!",
+        subtitle: "Insane visuals | 帅疯了",
         content: [
-            "❤ 보검 씨의 성실하고 바른 모습은 많은 사람들에게 귀감이 됩니다.",
-            "❤ 주변 사람들을 배려하고 챙기는 따뜻한 마음씨가 정말 아름다워요."
+            "❤ 진짜 너무 잘생겼어요! 얼굴이 천재예요~🥰🤩😝"
         ],
         img: ""
     },
     {
         num: 4,
-        title: "성장하는 배우의 모습을 보여주시는 점",
-        subtitle: "A growing actor | 不断成长的演员",
+        title: "세계 평화를 꿈꾸는 마음",
+        subtitle: "Wishing for world peace | 梦想是世界和平",
         content: [
-            "❤ 매 작품마다 새로운 도전을 주저하지 않고 완벽하게 소화해내는 모습이 멋져요.",
-            "❤ 노력하는 천재라는 말이 보검 씨에게 가장 잘 어울리는 것 같아요."
+            "❤ 요즘 세계에 전쟁이 끊이지 않네요.",
+            "❤ 우리의 힘은 미약하지만, 그래도 세계 평화를 간절히 기원합니다.🙏🙏🙏🩵🩵🩵"
         ],
         img: ""
     },
     {
         num: 5,
-        title: "미소가 아름다운 점",
-        subtitle: "Beautiful smile | 笑容很美",
+        title: "대단한 연기력",
+        subtitle: "Excellent acting skills | 了不起的演技",
         content: [
-            "❤ 보검 씨의 환한 미소를 보면 제 마음도 밝아지는 것 같아요.",
-            "❤ 그 미소 영원히 지켜주고 싶어요."
+            "❤ 배역마다 색다른 매력을 보여주셔서 정말 살아있는 사람처럼 느껴져요.🩵",
+            "❤ 끊임없이 성장하는 연기력에 매번 감탄합니다.👍🏻",
+            "❤ 더 다양한 모습으로 만날 보검 씨를 기대할게요!🥰"
+        ],
+        img: "assets/img/kuanzhi3.jpg"
+    },
+    {
+        num: 6,
+        title: "팬들의 이름을 소중히 기억하시는 마음",
+        subtitle: "Cherishing fans' names | 会认真记住粉丝名字",
+        content: [
+            "❤ 팬분들뿐만 아니라 정말 많은 이름을 항상 기억해주시죠.",
+            "❤ 모든 사람을 존중해주셔서 감사합니다.🩵",
+            "❤ 팬사인회 때 말했던 것처럼, 저희를 항상 기억해 주셔서 정말 감사합니다.🩵"
         ],
         img: ""
     },
     {
-        num: 6,
-        title: "팬들을 진심으로 아껴주시는 점",
-        subtitle: "Treasure the fans | 真心爱护粉丝",
-        content: [
-            "❤ 팬미팅이나 행사 때마다 팬들의 눈을 맞추고 진심을 전하려는 모습에 감동받아요.",
-            "❤ 항상 팬들을 '축복합니다'라고 말해주셔서 감사합니다."
-        ],
-        img: "assets/img/post-landscape-3.jpg"
-    },
-    {
         num: 7,
-        title: "택이에게 영혼을 불어넣어 주신 점",
-        subtitle: "You breathed life into Taek | 你给阿泽赋予了灵魂",
+        title: "세상을 밝게 만드는 미소를 가지신 것",
+        subtitle: "Possessing a world-brightening smile | 有让世界明亮起来的笑容",
         content: [
-            "❤ 저는 택이를 통해 보검 씨를 알게 되었어요.",
-            "❤ &lt;응답하라 1988&gt; 은 제 인생 드라마이고, 택이는 제가 가장 좋아하는 캐릭터예요.",
-            "❤ 택이 덕분에 우리가 이렇게 만나게 되었고, 보검 씨를 점점 더 좋아하게 되었어요."
+            "❤ 보검 씨의 미소는 꽃처럼 아름다워요.🌸",
+            "❤ 보검 씨의 미소는 모든 것을 치유해 줍니다.🩵",
+            "❤ 언제든 보검 씨의 미소를 보면, 모든 우울한 기분이 사르르 녹아내려요.🥰"
         ],
-        img: "assets/img/taek.jpg"
+        img: ""
     },
     {
         num: 8,
-        title: "늘 감사하다는 말을 하시는 점",
-        subtitle: "Always thankful | 永远会说感谢的话",
+        title: "피아노 치는 사람에게 항복할 수밖에",
+        subtitle: "I'm a sucker for a piano player | 无法抵抗会弹钢琴的人",
         content: [
-            "❤ 몇 년 전에 보검 씨께서 하신 말씀, \"늘 감사하다고 말하니까 감사한 일들이 생기더라고요\"를 기억하고 있습니다.",
-            "❤ 보검 씨 덕분에 저도 감사하는 마음으로 살고 있고, 그래서 제 인생은 정말 행복합니다. 정말 감사합니다!"
+            "❤ 피아노 치는 모습이 눈이 부실 정도로 멋있어요. ✨",
+            "❤ 단순히 ‘칠 줄 아는’ 정도가 아니라, 전문 연주자의 실력이에요.👍🏻"
         ],
         img: ""
     },
     {
         num: 9,
-        title: "선한 영향력을 전파하시는 점",
-        subtitle: "Spreading positive influence | 传播正能量",
+        title: "사진으로 일상을 기록하는 것을 좋아함",
+        subtitle: "Loving to record daily life with photos | 爱拍照记录生活",
         content: [
-            "❤ 보검 씨의 성실하고 바른 모습은 많은 사람들에게 귀감이 됩니다.",
-            "❤ 주변 사람들을 배려하고 챙기는 따뜻한 마음씨가 정말 아름다워요."
+            "❤ 사진 속에서 삶을 사랑하는 마음이 느껴져요. 🌻",
+            "❤ 보검 씨 덕분에 저도 소중한 순간들을 사진으로 기록하기 시작했습니다.📸",
+            "❤ 앞으로도 평생친구들에게 소중한 순간이 담긴 여행 '엽서'를 자주 보내주셨으면 좋겠어요.🥰"
         ],
-        img: ""
+        img: "assets/img/photo2.jpg"
     },
     {
         num: 10,
-        title: "성장하는 배우의 모습을 보여주시는 점",
-        subtitle: "A growing actor | 不断成长的演员",
+        title: "팬을 평생친구로 생각하는 마음",
+        subtitle: "Treating fans as lifelong friends | 把粉丝看作一生朋友",
         content: [
-            "❤ 매 작품마다 새로운 도전을 주저하지 않고 완벽하게 소화해내는 모습이 멋져요.",
-            "❤ 노력하는 천재라는 말이 보검 씨에게 가장 잘 어울리는 것 같아요."
+            "❤ 그 따뜻한 약속 덕분에 우리가 함께 걷는 길이 더 행복해졌어요. 🌸",
+            "❤ 저도 ‘평생친구’로서 언제나 응원할게요. 🩵"
         ],
         img: ""
     },
     {
         num: 11,
-        title: "미소가 아름다운 점",
-        subtitle: "Beautiful smile | 笑容很美",
+        title: "세상에서 가장 완벽하고 아름다운 코를 가졌음",
+        subtitle: "Having the most perfect nose in the world | 拥有这个世界上最好看的鼻子",
         content: [
-            "❤ 보검 씨의 환한 미소를 보면 제 마음도 밝아지는 것 같아요.",
-            "❤ 그 미소 영원히 지켜주고 싶어요."
+            "❤ 보검 씨 코에 꼭 보험 들어야 할 것 같아요. 🤭",
+            "❤ 아니, 사실 머리부터 발끝까지 전신 보험이 시급해요! ㅋㅋㅋ"
         ],
         img: ""
-    },
-    {
-        num: 12,
-        title: "팬들을 진심으로 아껴주시는 점",
-        subtitle: "Treasure the fans | 真心爱护粉丝",
-        content: [
-            "❤ 팬미팅이나 행사 때마다 팬들의 눈을 맞추고 진심을 전하려는 모습에 감동받아요.",
-            "❤ 항상 팬들을 '축복합니다'라고 말해주셔서 감사합니다."
-        ],
-        img: "assets/img/post-landscape-3.jpg"
     }
 ];
 
