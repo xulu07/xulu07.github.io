@@ -8,19 +8,19 @@ const tracks = [
         title: "별 보러 가자",
         artist: "박보검",
         cover: "assets/music/lets-go-to-see-the-star.jpg",
-        src: "assets/music/별 보러 가자.mp3"
+        src: "assets/music/별 보러 가자.MP3"
     },
     {
         title: "On My Way",
         artist: "박보검",
         cover: "assets/music/on-my-way.jpg",
-        src: "assets/music/on my way.mp3"
+        src: "assets/music/on my way.MP3"
     },
     {
         title: "매일 그대와",
         artist: "박보검",
         cover: "assets/music/everyday-with-you.jpg",
-        src: "assets/music/매일 그대와.mp3"
+        src: "assets/music/매일 그대와.MP3"
     }
 ];
 
