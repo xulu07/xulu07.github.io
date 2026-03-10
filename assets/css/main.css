@@ -1426,6 +1426,545 @@ section,
 }
 
 /*--------------------------------------------------------------
+# Memory Game Styling
+--------------------------------------------------------------*/
+.memory-game-container {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.memory-board {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.memory-card {
+  aspect-ratio: 1 / 1;
+  perspective: 1000px;
+  cursor: pointer;
+}
+
+.memory-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.memory-card.flipped .memory-card-inner,
+.memory-card.matched .memory-card-inner {
+  transform: rotateY(180deg);
+}
+
+.memory-card-front,
+.memory-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.memory-card-front {
+  background-color: var(--accent-color);
+  background-image: url('../img/memory game/bg-logo.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.memory-card-back {
+  background-color: white;
+  transform: rotateY(180deg);
+}
+
+.memory-card-back img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.memory-controls p {
+  font-family: 'Hi Melody', sans-serif;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+/*--------------------------------------------------------------
+# Quotes Flip Book Styling
+--------------------------------------------------------------*/
+.quotes-container {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  perspective: 1500px;
+  position: relative;
+}
+
+.book-scene {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  /* Typical book proportion */
+  transform-style: preserve-3d;
+}
+
+.book-page {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fdfdfd;
+  /* Off-white page color */
+  padding: 40px 30px;
+  box-shadow:
+    inset 4px 0 10px rgba(0, 0, 0, 0.05),
+    /* Inner spine crease shadow */
+    2px 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 2px 8px 8px 2px;
+  /* Right corners slightly rounded like pages */
+  border-left: 12px solid #8ba4b4;
+  /* Spine color */
+  border-right: 1px solid #eee;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transform-style: preserve-3d;
+  transform-origin: left center;
+  /* Hinge on the left */
+  transition: transform 0.8s cubic-bezier(0.645, 0.045, 0.355, 1);
+  backface-visibility: hidden;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.book-page.cover-page {
+  background-color: #e3f2fd;
+  /* Light Blue Cover */
+  border-left: 12px solid #64b5f6;
+  /* Book cover darker spine */
+  box-shadow:
+    inset 4px 0 10px rgba(0, 0, 0, 0.05),
+    4px 4px 12px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+}
+
+.book-page::before {
+  /* Line decoration near the spine to mimic a book hinge */
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 3px;
+  width: 2px;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.book-page.flipped {
+  transform: rotateY(-180deg);
+  z-index: 0 !important;
+}
+
+.quote-content {
+  position: relative;
+  width: 100%;
+}
+
+.cover-title {
+  font-family: 'Nanum Gothic', sans-serif;
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: #1565c0;
+  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
+  margin: 0;
+}
+
+.cover-image {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 20px auto;
+  border: 4px solid #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  display: block;
+}
+
+.book-page.content-page::after {
+  content: "";
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  width: 60px;
+  height: 60px;
+  background-image: url('../img/bg_logo.jpg');
+  /* Watermark using Bogum memory game card back icon */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.15;
+  /* Subdued watermark effect */
+  pointer-events: none;
+}
+
+.quote-text {
+  font-family: 'Gamja Flower', cursive;
+  font-size: 1.6rem;
+  line-height: 1.8;
+  color: #2c3e50;
+  margin: 0;
+}
+
+.quote-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.quote-controls button {
+  width: 35px;
+  height: 35px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 20;
+}
+
+/*--------------------------------------------------------------
+# Claw Machine Styling
+--------------------------------------------------------------*/
+.claw-machine-container {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  position: relative;
+  background-image: url('../img/wawaji.png');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  aspect-ratio: 685 / 843;
+}
+
+.claw-machine-glass {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 5;
+}
+
+/* This matches the internal "box" where prizes sit */
+.claw-machine-interior {
+  position: absolute;
+  top: 18.5%;
+  left: 15.7%;
+  width: 68.6%;
+  height: 48%;
+  background: transparent;
+  pointer-events: auto;
+  /* Allow interactions for drop logic */
+  z-index: 1;
+  overflow: hidden;
+  /* Contains the claw and prizes within the red box */
+}
+
+.prizes-container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.claw-machine-foreground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../img/wawaji.png');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  pointer-events: none;
+  z-index: 100;
+  /* Donut Mask: Covers outer frame, punches a hole in the middle for the glass */
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 0%,
+      /* Outer frame */
+      15.7% 15.6%, 15.7% 66.5%, 84.3% 66.5%, 84.3% 15.6%, 15.7% 15.6%
+      /* Inner hole matches the interior floor ledge */
+    );
+}
+
+
+
+@keyframes clawSwing {
+  0% {
+    left: 10%;
+  }
+
+  50% {
+    left: 90%;
+  }
+
+  100% {
+    left: 10%;
+  }
+}
+
+.claw-arm-container {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 60px;
+  z-index: 10;
+  /* Apply swinging animation by default */
+  animation: clawSwing 3s ease-in-out infinite;
+  /* Transition is only used for dropping down now */
+  transition: top 1.5s ease-in-out;
+}
+
+/* Pause the animation when grabbing */
+.claw-arm-container.dropping {
+  animation-play-state: paused;
+}
+
+.claw-line {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 200px;
+  background-color: #888;
+}
+
+.claw-base {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30px;
+  height: 10px;
+  background-color: #ff6b81;
+  border-radius: 3px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+
+.claw-prong {
+  position: absolute;
+  top: 6px;
+  width: 12px;
+  height: 28px;
+  border: 3px solid #ff6b81;
+  border-top: none;
+  border-radius: 0 0 12px 12px;
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.claw-prong.left {
+  left: -2px;
+  border-right: none;
+  transform-origin: top right;
+  transform: rotate(25deg);
+}
+
+.claw-prong.right {
+  right: -2px;
+  border-left: none;
+  transform-origin: top left;
+  transform: rotate(-25deg);
+}
+
+.claw-arm-container.closed .claw-prong.left {
+  transform: rotate(5deg);
+}
+
+.claw-arm-container.closed .claw-prong.right {
+  transform: rotate(-5deg);
+}
+
+.prizes-container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-end;
+  padding: 0 10px 10px;
+  box-sizing: border-box;
+}
+
+.prize-ball {
+  width: 50px;
+  height: 50px;
+  background-color: #fff;
+  border-radius: 50%;
+  box-shadow: inset -4px -4px 8px rgba(0, 0, 0, 0.1), 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  border: 1.5px solid rgba(255, 255, 255, 0.8);
+  transition: left 1s ease-in-out, top 1s ease-in-out, opacity 0.5s;
+  z-index: 1;
+  box-sizing: border-box;
+}
+
+.prize-ball.grabbed {
+  transition: transform 1s ease-in-out, top 1s ease-in-out !important;
+  z-index: 15;
+}
+
+.prize-ball img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.9;
+}
+
+.prize-ball::after {
+  content: '';
+  position: absolute;
+  top: 4px;
+  left: 8px;
+  width: 10px;
+  height: 5px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 6px;
+  transform: rotate(-30deg);
+}
+
+/* Integrated Controls */
+.claw-controls {
+  position: absolute;
+  top: 72%;
+  left: 15.7%;
+  width: 68.5%;
+  height: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  z-index: 110;
+  /* Above foreground mask to stay interactive */
+}
+
+#claw-drop-btn,
+#claw-reset-btn {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  transition: transform 0.1s, background-color 0.2s;
+  box-shadow: 0 4px 0 rgba(0, 0, 0, 0.2);
+  margin: 0 !important;
+}
+
+#claw-drop-btn {
+  background-color: #ff6b81;
+  color: white;
+}
+
+#claw-reset-btn {
+  background-color: #f0f0f0;
+  color: #666;
+}
+
+#claw-drop-btn:active,
+#claw-reset-btn:active {
+  transform: translateY(2px);
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.2);
+}
+
+#claw-drop-btn i,
+#claw-reset-btn i {
+  font-size: 1.2rem;
+}
+
+/* Modal Styling */
+.claw-prize-modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.85);
+  /* Slightly darker to contrast with the glass */
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s;
+  border-radius: 15px;
+  /* Match the claw glass border radius */
+}
+
+.claw-prize-modal.show {
+  opacity: 1;
+}
+
+.claw-prize-content {
+  position: relative;
+  background: #fff;
+  padding: 30px;
+  border-radius: 20px;
+  text-align: center;
+  max-width: 90%;
+  transform: scale(0.8);
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.claw-prize-modal.show .claw-prize-content {
+  transform: scale(1);
+}
+
+.close-prize-btn {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #aaa;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.close-prize-btn:hover {
+  color: #ff6b81;
+}
+
+/*--------------------------------------------------------------
 # Lifestyle Category Section
 --------------------------------------------------------------*/
 .lifestyle-category .post-meta {

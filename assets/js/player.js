@@ -7,20 +7,20 @@ const tracks = [
     {
         title: "별 보러 가자",
         artist: "박보검",
-        cover: "assets/img/lets-go-to-see-the-star.jpg",
-        src: "assets/music/별 보러 가자.m4a"
+        cover: "assets/music/lets-go-to-see-the-star.jpg",
+        src: "assets/music/별 보러 가자.mp3"
     },
     {
-        title: "Bloomin'",
-        artist: "Park Bo-gum",
-        cover: "assets/img/post-landscape-3.jpg",
-        src: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3"
+        title: "On My Way",
+        artist: "박보검",
+        cover: "assets/music/on-my-way.jpg",
+        src: "assets/music/on my way.mp3"
     },
     {
-        title: "Dear My Friend",
-        artist: "Park Bo-gum",
-        cover: "assets/img/taek.jpg",
-        src: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3"
+        title: "매일 그대와",
+        artist: "박보검",
+        cover: "assets/music/everyday-with-you.jpg",
+        src: "assets/music/매일 그대와.mp3"
     }
 ];
 

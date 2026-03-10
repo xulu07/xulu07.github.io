@@ -113,6 +113,26 @@ const reasonsList = [
             "❤ 아니, 사실 머리부터 발끝까지 전신 보험이 시급해요! ㅋㅋㅋ"
         ],
         img: ""
+    },
+    {
+        num: 12,
+        title: "매일 일기 쓰는 습관이 있음",
+        subtitle: "Keeping a daily journal | 坚持每天写日记",
+        content: [
+            "❤ 매일 일기를 쓰거나 어떤 일을 꾸준히 하는 건 정말 어려운 일이에요.",
+            "❤ 보검 씨 덕분에 저도 좋은 습관들이 하나씩 생겼어요.예를 들면 운동이랑 한국어 공부요! 💪🏻",
+            "❤ 정말 고마워요！🩵🩵🩵"
+        ],
+        img: ""
+    },
+    {
+        num: 13,
+        title: "노래를 정말 잘 부름",
+        subtitle: "Great at singing | 唱歌好听",
+        content: [
+            "❤ 피아노를 치면서 노래를 부르는 모습이 세상에서 제일 멋있어요.🎹💖🎤"
+        ],
+        img: ""
     }
 ];
 
@@ -155,7 +175,7 @@ function initSearch() {
 
         if (!targetReason) {
             if (errorTip) {
-                errorTip.textContent = `❌ 暂无编号${inputNum}的理由`;
+                errorTip.innerHTML = `<span style="font-family: 'Nanum Gothic', sans-serif; font-size: 1rem; color: red;">'${inputVal}'번 이유를 찾을 수 없습니다. ㅠ ㅠ</span>`;
                 errorTip.style.display = 'block';
             }
             return;
