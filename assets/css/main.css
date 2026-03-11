@@ -838,11 +838,57 @@ section,
 }
 
 .interactive-gif {
-  max-width: 240px;
-  /* Increased from 180px */
+  max-width: 280px;
+  /* Increased from 240px */
   height: auto;
   border-radius: 15px;
   filter: drop-shadow(0 5px 15px rgba(173, 216, 230, 0.4));
+}
+
+.speech-bubble {
+  position: absolute;
+  top: 10px; /* Moved down from -20px */
+  right: -30px; /* Slight horizontal adjustment */
+  background: linear-gradient(135deg, #ffffff 0%, #f0f8ff 100%);
+  border: 2px solid #87ceeb;
+  border-radius: 20px;
+  padding: 12px 18px; /* Larger padding */
+  font-family: 'Hi Melody', cursive;
+  font-size: 22px; /* Increased font size */
+  font-weight: 800; /* Bolder text */
+  color: #333;
+  box-shadow: 0 8px 20px rgba(135, 206, 235, 0.3); /* Softer, colored shadow */
+  opacity: 0;
+  transform: translateY(15px) scale(0.95);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Bouncy transition */
+  pointer-events: none;
+  z-index: 20;
+  white-space: nowrap;
+}
+
+.speech-bubble.show {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.speech-bubble::after {
+  content: '';
+  position: absolute;
+  bottom: -12px;
+  left: 30px;
+  border-width: 12px 12px 0;
+  border-style: solid;
+  border-color: #f0f8ff transparent transparent; /* Match gradient end */
+}
+
+.speech-bubble::before {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  left: 29px;
+  border-width: 14px 14px 0;
+  border-style: solid;
+  border-color: #87ceeb transparent transparent;
 }
 
 .score-display.mini {

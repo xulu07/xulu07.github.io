@@ -79,6 +79,39 @@ document.addEventListener('DOMContentLoaded', () => {
     gifTrigger.addEventListener('mouseleave', () => {
         cursorLabel.style.display = 'none';
     });
+
+    // --- Speech Bubble Logic ---
+    const video = document.getElementById('interactive-video');
+    const bubble = document.getElementById('speech-bubble');
+    const phrases = [
+        "오늘도 잘 지냈어요?",
+        "보고 싶었어요!",
+        "언제나 응원할게요!",
+        "함께라서 행복해요!",
+        "사랑해요~",
+        "오늘 하루도 수고했어요!",
+        "우리 또 만나요!"
+    ];
+
+    let bubbleVisible = false;
+
+    if (video && bubble) {
+        video.addEventListener('timeupdate', () => {
+            // Character speaks roughly between 4.5s and 5.5s
+            const time = video.currentTime;
+            const isMouthMoving = (time >= 4.5 && time <= 5.5);
+
+            if (isMouthMoving && !bubbleVisible) {
+                const randomPhrase = phrases[Math.floor(Math.random() * phrases.length)];
+                bubble.innerText = randomPhrase;
+                bubble.classList.add('show');
+                bubbleVisible = true;
+            } else if (!isMouthMoving && bubbleVisible) {
+                bubble.classList.remove('show');
+                bubbleVisible = false;
+            }
+        });
+    }
 });
 
 function createPopEffect(container, clientX, clientY) {
